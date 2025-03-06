@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", serif;
+}
+
+/* common style*/
+
+a {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+/* Navbar style*/
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: rgb(121, 150, 157);
+  position: sticky;
+  top: 0;
+}
+nav .navbar-brand h3 {
+  color: #fff;
+}
+
+nav .navbar-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav .navbar-nav li {
+  padding: 15px 10px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+nav .navbar-nav li a {
+  color: #fff;
+}
+nav .navbar-nav li:hover a {
+  color: #bfff00;
+}
+
+/*Serach*/
+
+input {
+  width: 300px;
+  height: 35px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 0 10px;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  padding: 7px 10px;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+  background-color: #bfff00;
+  font-weight: 600;
+}
+
+button:hover {
+  background-color: #ccc;
+}
+
+label {
+  padding: 0 5px;
+  font-weight: bold;
+}
+select {
+  width: 120px;
+  height: 25px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+/* Container style*/
+.container {
+  width: 100%;
+  height: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.container-header {
+  margin-top: 20px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  position: sticky;
+  top: 51.5px;
+  background-color: #fff;
+  z-index: 1;
+}
+
+.news-gallery-container {
+  margin: 30px auto;
+  width: 100%;
+  height: 100%;
+  max-width: 1300px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  width: 400px;
+  height: 450px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px #9b9999;
+}
+.card h3 {
+  font-weight: bold;
+  font-size: 17px;
+}
+.card-img {
+  width: 400px;
+  height: 280px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  overflow: hidden;
+}
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-body {
+  height: 60px;
+}
+
+.card-body,
+.card-footer,
+.card-header {
+  padding: 5px 10px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+}
+
+.card-footer p {
+  font-size: 13px;
+  color: #6c0606;
+}
+
+.card-footer .author {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 5px;
+  color: #6c0606;
+}
+
+.card button {
+  background-color: rgb(121, 150, 157);
+  border: 0;
+  padding: 3px 8px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.card button:hover {
+  color: #bfff00;
+}
+
+/* News Details*/
+.news-detail-container .card {
+  margin: 30px auto;
+  width: 70%;
+  height: fit-content;
+}
+
+.news-detail-container .card .card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.news-detail-container .card .card-body {
+  width: 100%;
+  height: fit-content;
+}
+.news-detail-container .card .card-body p {
+  margin-bottom: 30px;
+}
+
+/* No data*/
+.no-data-found {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Spinner */
+
+.spinners {
+  max-width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 30px auto;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  background-color: rgb(121, 150, 157);
+  border-radius: 50%;
+  animation: spinner 2.5s ease-in-out forwards infinite;
+ 
+}
+
+.spinner:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+.spinner:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.spinner:nth-child(3) {
+  animation-delay: 0.1s;
+}
+
+.spinner:nth-child(4) {
+  animation-delay: 0s;
+}
+
+@keyframes spinner {
+  0% {
+    transform: translateX(-1000px);
+  }
+  50% {
+    transform: translateX(0px);
+     
+  }
+  100% {
+    transform: translateX(1000px);
+  }
+}
